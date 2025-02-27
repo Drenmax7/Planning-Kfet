@@ -49,3 +49,4 @@ app.*.map.json
 /linux
 test/widget_test.dart
 /web
+/windows

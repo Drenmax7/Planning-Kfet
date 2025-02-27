@@ -47,3 +47,5 @@ app.*.map.json
 /ios
 /macos
 /linux
+test/widget_test.dart
+/web

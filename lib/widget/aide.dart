@@ -109,6 +109,16 @@ class _Aide extends State<Aide> {
           "Tu peux ensuite aller dans le 3eme sous-onglet et cliquer sur le bouton 'Generer' pour generer automatiquement un planning"
     },
     {
+      "q":"Je n'utilise pas le format de demande de disponibilité que celui que l'application génére, puis je tout de même utiliser l'application ?",
+      "r":"Il est tout à fait possible que tu utilises ton propre format de tableau, bien que cela soit moins pratique\n"
+          "Tu vas devoir extraire par toi même les informations de ton tableau et les mettres dans un fichier txt sous la forme decrite ci dessous\n"
+          "Ce fichier txt pourra ensuite être importé de la même façon que tu l'aurai fait pour le tableau, dans l'onglet 'Generation Planning' puis le sous onglet\n"
+          "'Import Dispos'\n"
+          "Format du fichier txt :\n"
+          "{Personne1:[true,true,true,...,false,true], Personne2:[true,true,true,...,false,true], ...}\n"
+          "Avec chaque liste contenant 15 booleen, un pour chaque service de la semaine"
+    },
+    {
       "q":"Comment récuperer le planning maintenant qu'il a été crée ?",
       "r":"Tu peux utiliser le bouton orange 'screenshot' présent vers le haut de l'écran sur la droite\n"
           "Ce bouton va constituer une image du planning que tu vois et l'enregistrer dans le dossier qui contient l'executable du planning\n"

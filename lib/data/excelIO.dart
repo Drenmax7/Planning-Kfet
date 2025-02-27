@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:excel/excel.dart';
@@ -103,6 +104,22 @@ class ExcelIO{
 
   static Map<String,List<bool>> lire(String path){
     Map<String,List<bool>> dispos = {};
+
+    if (path.substring(path.length-3,path.length) == "txt") {
+      try {
+        String data = File(path).readAsStringSync();
+        Map<String, dynamic> decoded = jsonDecode(data);
+        dispos = decoded.map(
+              (key, value) => MapEntry(key, List<bool>.from(value)),
+        );
+        return dispos;
+      }
+      catch (e){
+        print(e);
+        return dispos;
+      }
+    }
+
 
     var bytes = File(path).readAsBytesSync();
     var excel = Excel.decodeBytes(bytes);

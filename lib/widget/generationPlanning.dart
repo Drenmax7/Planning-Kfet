@@ -101,7 +101,7 @@ class _GenerationPlanning extends State<GenerationPlanning> {
   void pickFile() async {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
-      allowedExtensions: ['xlsx'],
+      allowedExtensions: ['xlsx','txt'],
       initialDirectory: await Stockage.localPath,
     );
 
@@ -133,7 +133,7 @@ class _GenerationPlanning extends State<GenerationPlanning> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                    "Importe un fichier (format .xlsx) 📄",
+                    "Importe un fichier (format .xlsx ou .txt) 📄",
                     style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 16),
